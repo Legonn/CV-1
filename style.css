@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box; /*Pentru calcul continut + padding + border + margin */
+  font-family: "Roboto", sans-serif;
+}
+body {
+  margin: 0;
+  display: flex; /* Se va reflecta elementul in elementele copii */
+  flex-direction: row; /*Afisam elementele pe randuri*/
+  flex-wrap: wrap; /*Realizeaza trecerea elementelor de pe un rand pe altul cand nu mai avem loc*/
+}
+.container-stanga {
+  width: 30%;
+  border: 2px solid black;
+  background-color: #191919;
+  padding: 30px;
+  color: white;
+}
+.container-dreapta {
+  width: 70%;
+  padding: 30px;
+  border: 2px solid black;
+  background-color: wheat;
+  color: black;
+}
+h1 {
+  text-transform: uppercase;
+}
+.imagine-persoana {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  border: 2px solid aquamarine;
+  display: block; /* se intinde pe tot width-ul disponibil*/
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px; /*margin: 30px auto;(se puteau scrie toate doar asa*/
+}
+.titlu-sectiune {
+  border-bottom: 1px solid white; /*grosimea specificatia culoarea */
+}
+.container-dreapta {
+  width: 70%;
+}
+ul {
+  padding-left: 10px;
+}
+.header {
+  text-align: left;
+  display: block;
+}
+.titlu-dreapta {
+  border-bottom: 1px solid black;
+}
+.highlighter {
+  color: silver;
+}
+#footer {
+  display: flex;
+}
+.buton-mai-mult {
+  font-weight: bold;
+  display: inline-block; /*Aveam nevoie de dsiplay ca sa putem umbla la padding si margin*/
+  padding: 5px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+.sectiune {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.element-ascuns {
+  display: none;
+}
+
+/*Responsivness mereu la sfarsitul fisierului CSS*/
+@media screen and (max-width: 769px) {
+  /*Intotdeauna se specifica max-width/Se v-a uita in intervalul 0->769px*/
+  .container-stanga {
+    width: 100%;
+    /*border-right:none
+      border-bottom:2px solid black (daca aveam bordura pentru containerul din stanga pe partea dreapta si vrem sa o mutam jos pentru display-ul telefoanelor */
+  }
+  .container-dreapta {
+    width: 100%;
+  }
+}
